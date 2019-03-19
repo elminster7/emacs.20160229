@@ -1,0 +1,5 @@
+* ENV
+- core/core-configure-layer.el 에서 emacs/configure-layers 로 해당 레이어 별로 로딩 하는 방식으로.
+
+
+layers/+[category] 
