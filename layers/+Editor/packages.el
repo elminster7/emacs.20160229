@@ -485,15 +485,15 @@
   (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
   (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode)
 
-;;  (global-semantic-idle-scheduler-mode t)
-;;  (global-semanticdb-minor-mode t)
-;;  (global-semantic-idle-summary-mode t)
-;;  (global-semantic-idle-completions-mode t)
+  (global-semantic-idle-scheduler-mode t)
+  (global-semanticdb-minor-mode t)
+  (global-semantic-idle-summary-mode t)
+  (global-semantic-idle-completions-mode t)
   (global-semantic-highlight-func-mode t)
   (global-semantic-decoration-mode t)
   (global-semantic-stickyfunc-mode t)
   (global-semantic-mru-bookmark-mode t)
-  (setq-default semantic-symref-tool "cscope")
+  (setq-default semantic-symref-tool 'detect)
 
   (semanticdb-enable-gnu-global-databases 'c++-mode)
   (semanticdb-enable-gnu-global-databases 'c-mode)
@@ -565,11 +565,8 @@
   (better/smex)
   
   ;; Autocomplete
-  ;;(editor/autocomplete)
-  ;;(editor/yasnippet)
-
-  ;; code folding
-  ;;(editor/hideshowvis)
+  (editor/autocomplete)
+  (editor/yasnippet)
 
   ;; Editor modify
   (editor/igrep)
