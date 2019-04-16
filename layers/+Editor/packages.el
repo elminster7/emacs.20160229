@@ -336,6 +336,7 @@
           helm-gtags-use-input-at-cursor t
           helm-gtags-pulse-at-cursor t)
     )
+  (setq tramp-verbose 6)
   )
 
 (defun editor/autopair ()
@@ -409,7 +410,7 @@
   "adjusted defaults for C/C++ mode use with the Linux kernel."
   (interactive)
   (setq indent-tabs-mode nil) 
-  (setq c-basic-offset 8)
+  (setq c-basic-offset 4)
   (add-hook 'c-mode-hook 'linux-c-indent)
   (add-hook 'c-mode-hook (lambda() (c-set-style "K&R")))
   (add-hook 'c++-mode-hook 'linux-c-indent)
