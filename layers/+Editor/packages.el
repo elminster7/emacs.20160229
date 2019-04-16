@@ -465,6 +465,7 @@
   (setq-default
    whitespace-line-column 80
    whitespace-style       '(face lines-tail))
+  (add-hook 'prog-mode-hook 'whitespace-mode)
   )
 (defun my-font-lock-function (start end)
   "Set faces for font-lock between START and END.")
@@ -493,7 +494,7 @@
   (global-semantic-decoration-mode t)
   (global-semantic-stickyfunc-mode t)
   (global-semantic-mru-bookmark-mode t)
-  (setq-default semantic-symref-tool 'detect)
+  (setq-default semantic-symref-tool 'cscope)
 
   (semanticdb-enable-gnu-global-databases 'c++-mode)
   (semanticdb-enable-gnu-global-databases 'c-mode)
