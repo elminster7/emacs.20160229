@@ -28,6 +28,28 @@
     )
   )
 
+;; tramp setup
+(defun editor/helm-tramp ()
+  "helm tramp mode"
+  :ensure t
+  :init (setq tramp-default-method "ssh")
+  (define-key global-map (kbd "C-c  s") 'helm-tramp)
+  (add-hook 'helm-tramp-pre-command-hook '(lambda () (global-aggressive-indent-mode 0)
+				            (projectile-mode 0)
+				            (editorconfig-mode 0)))
+  (add-hook 'helm-tramp-quit-hook '(lambda () (global-aggressive-indent-mode 1)
+			             (projectile-mode 1)
+			             (editorconfig-mode 1)))
+  (setq tramp-verbose 6)
+  (global-set-key (kbd "M-x") #'helm-M-x)
+  (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+  (global-set-key (kbd "C-x C-f") #'helm-find-files)
+
+  (helm-mode 1)
+
+  (setq helm-M-x-fuzzy-match t)
+  )
+
 ;; toggle-fullscreen
 (defun toggle-fullscreen ()
   "Toggle full screen"
@@ -336,7 +358,6 @@
           helm-gtags-use-input-at-cursor t
           helm-gtags-pulse-at-cursor t)
     )
-  (setq tramp-verbose 6)
   )
 
 (defun editor/autopair ()
@@ -584,6 +605,9 @@
   ;; function
   (editor/function-args)
 
+  ;; helm tramp
+  (editor/helm-tramp)
+  
   ;; file/modify
   (editor/vlf)
 
