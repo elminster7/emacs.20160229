@@ -113,7 +113,8 @@
     (add-hook 'c++-mode-hook 'highlight-indent-guides-mode)
     (add-hook 'shell-script-mode 'highlight-indent-guides-mode)
     (add-hook 'python-mode-hook 'highlight-indent-guides-mode)
-    :init (setq highlight-indent-guides-method 'character)))
+    :init (setq highlight-indent-guides-method 'character)
+    (setq highlight-indent-guides-delay 0)))
 
 ;; ▼ better default
 (defun scope/better-default-init ()
