@@ -8,6 +8,16 @@
     (load-theme 'monokai t)
     ))
 
+(defun theme/solarized-init ()
+  "Solarized theme install."
+  (use-package solarized-theme
+    :ensure t
+    :init
+    (setq solarized-dark t)
+    (load-theme 'solarized-dark t)
+    )
+  )
+
 ;; ▶ initialize leuven theme.
 (defun theme/leuven-init ()
   "Leuven theme install."
@@ -194,7 +204,8 @@
   ;;(theme/monokai-init)
   ;;(theme/leuven-init)
   ;;(theme/spacemacs-init)
-  (theme/monokai-alt-init)
+  ;;(theme/monokai-alt-init)
+  (theme/solarized-init)
   ;;(theme/dracula-init)
   ;;(theme/atom-one-dark-init)
   ;;(theme/material-init)

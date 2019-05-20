@@ -28,6 +28,38 @@
     )
   )
 
+;; Window
+;;;; Window
+(use-package eyebrowse
+  :ensure t
+  :init
+  (setq eyebrowse-keymap-prefix (kbd "C-j <SPC>"))
+  (eyebrowse-mode t)
+  :bind
+  (:map eyebrowse-mode-map
+    ("C-j ;" . eyebrowse-last-window-config)
+    ("C-j 0" . eyebrowse-close-window-config)
+    ("C-j 1" . eyebrowse-switch-to-window-config-1)
+    ("C-j 2" . eyebrowse-switch-to-window-config-2)
+    ("C-j 3" . eyebrowse-switch-to-window-config-3)))
+
+(defun editor/eyebrowse ()
+  "eyebrowse window"
+  ;;;; Window
+  (use-package eyebrowse
+    :ensure t
+    :init
+    (setq eyebrowse-keymap-prefix (kbd "C-j <SPC>"))
+    (eyebrowse-mode t)
+    :bind
+    (:map eyebrowse-mode-map
+          ("C-j ;" . eyebrowse-last-window-config)
+          ("C-j 0" . eyebrowse-close-window-config)
+          ("C-j 1" . eyebrowse-switch-to-window-config-1)
+          ("C-j 2" . eyebrowse-switch-to-window-config-2)
+          ("C-j 3" . eyebrowse-switch-to-window-config-3)))
+  )
+
 ;; tramp setup
 (defun editor/helm-tramp ()
   "helm tramp mode"
@@ -630,7 +662,8 @@
   (editor/flycheck)
   (editor/better-default)
   (editor/auto-highlight-symbol)
-;;  (editor/markdown)
+  ;;  (editor/markdown)
+  (editor/eyebrowse)
 
   ;; font
   (editor/font)
