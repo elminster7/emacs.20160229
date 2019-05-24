@@ -27,6 +27,15 @@
     (load-theme 'leuven t))
   )
 
+;; ▶ initialize leuven theme.
+(defun theme/autumn-light-init ()
+  "Leuven theme install."
+  (use-package autumn-light-theme
+    :ensure t
+    :init
+    (load-theme 'autumn-light t))
+  )
+
 ;; ▶ initialize draculra theme.
 (defun theme/dracula-init ()
   "Draculra theme install."
@@ -205,11 +214,12 @@
   ;;(theme/leuven-init)
   ;;(theme/spacemacs-init)
   ;;(theme/monokai-alt-init)
-  (theme/solarized-init)
+  ;;(theme/solarized-init)
   ;;(theme/dracula-init)
   ;;(theme/atom-one-dark-init)
   ;;(theme/material-init)
   ;;(theme/hemisu-init)
+  (theme/autumn-light-init)
   
   ;; Scopes Init
   (scope/beacon-init)
