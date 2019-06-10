@@ -40,12 +40,12 @@
     (eyebrowse-mode t)
     :bind
     (:map eyebrowse-mode-map
-          ("C-j ;" . eyebrowse-last-window-config)
-          ("C-j 0" . eyebrowse-close-window-config)
-          ("C-j 1" . eyebrowse-switch-to-window-config-1)
-          ("C-j 2" . eyebrowse-switch-to-window-config-2)
-          ("C-j 3" . eyebrowse-switch-to-window-config-3)
-          ("C-j 3" . eyebrowse-switch-to-window-config-4)))
+          ("C-e ;" . eyebrowse-last-window-config)
+          ("C-e 0" . eyebrowse-close-window-config)
+          ("C-e 1" . eyebrowse-switch-to-window-config-1)
+          ("C-e 2" . eyebrowse-switch-to-window-config-2)
+          ("C-e 3" . eyebrowse-switch-to-window-config-3)
+          ("C-e 4" . eyebrowse-switch-to-window-config-4)))
   )
 
 	(defun pl-transparency (value)
