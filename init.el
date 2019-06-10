@@ -60,5 +60,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "PragmataPro" :foundry "fsdf" :full normal :weight normal :height 72 :width normal :full normal :full normal :full normal :full normal :full normal :slant normal)))))
+ '(default ((t (:family "Envy Code R" :foundry "ENVY" :full normal :weight normal :height 90 :width normal :full normal :full normal :full normal :full normal :full normal :slant normal)))))
 

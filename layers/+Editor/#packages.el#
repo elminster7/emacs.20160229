@@ -45,14 +45,8 @@
           ("C-j 1" . eyebrowse-switch-to-window-config-1)
           ("C-j 2" . eyebrowse-switch-to-window-config-2)
           ("C-j 3" . eyebrowse-switch-to-window-config-3)
-          ("C-j 3" . eyebrowse-switch-to-window-config-4)))
+          ("C-j 3" . eyebrowse-switch-to-window-config-4))
   )
-
-	(defun pl-transparency (value)
-	  "Set the transparency of the frame window.
-	  Argument VALUE 0 is transparent, 100 is opaque."
-	  (interactive "nTransparency Value (0 - 100): ")
-	  (set-frame-parameter (selected-frame) 'alpha value))
 
 ;; tramp setup
 (defun editor/helm-tramp ()
@@ -674,7 +668,6 @@
   ;; helm bind-key
   (editor/helm-bind-key)
   (editor/helm-cscope)
-	(pl-transparency 100)
 
   ;; python settings
   ;;(editor/python)
