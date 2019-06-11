@@ -176,7 +176,10 @@
   (bind-key "M-1" 'ecb-goto-window-sources)
   (bind-key "M-2" 'ecb-goto-window-methods)
   (bind-key "M-3" 'ecb-goto-window-symboldef)
-  (bind-key "M-4" 'ecb-goto-window-edit1))
+  (bind-key "M-4" 'ecb-goto-window-edit1)
+
+  ;; dired keysettings
+  (bind-key "C-d" 'find-name-dired))
 
 ;; ▼ better default/ido-mode
 (defun editor/better-default ()
