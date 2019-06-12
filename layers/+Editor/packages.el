@@ -71,8 +71,6 @@
   (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
   (global-set-key (kbd "C-x C-f") #'helm-find-files)
 
-  (helm-mode 1)
-
   (setq helm-M-x-fuzzy-match t)
   )
 
@@ -501,7 +499,7 @@
   ;; use specific font for Korean charset.
   ;; if you want to use different font size for specific charset,
   ;; add :size POINT-SIZE in the font-spec.
-  (set-fontset-font t 'hangul (font-spec :name "한겨레결체"))
+  ;;(set-fontset-font t 'hangul (font-spec :name "한겨레결체"))
 
   ;; you may want to add different for other charset in this way.
   (set-language-environment "Korean")
