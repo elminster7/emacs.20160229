@@ -177,7 +177,7 @@
   (bind-key "M-4" 'ecb-goto-window-edit1)
 
   ;; dired keysettings
-  (bind-key "C-d" 'find-name-dired))
+  (bind-key "C-v" 'find-name-dired))
 
 ;; ▼ better default/ido-mode
 (defun editor/better-default ()
@@ -403,6 +403,10 @@
     (bind-key "M-c" 'helm-cscope-find-calling-this-function)
     (bind-key "M-]" 'helm-cscope-find-global-definition)
     (bind-key "M-[" 'helm-cscope-pop-mark)
+    ;; terminal key bindings
+    (bind-key "ç" 'helm-cscope-find-calling-this-function)
+    (bind-key "ß" 'helm-cscope-find-this-text-string)
+    (bind-key "ƒ" 'helm-cscope-find-egrep-pattern) 
     )
   )
  
