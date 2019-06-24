@@ -51,7 +51,7 @@
   (use-package spacemacs-theme
     :ensure t
     :init
-    (load-theme 'spacemacs-light t))
+    (load-theme 'spacemacs-dark t))
   )
 
 ;;  ▶ initialize monokai-alt-theme
@@ -212,7 +212,7 @@
   ;; Theme Init
   ;;(theme/monokai-init)
   ;;(theme/leuven-init)
-  ;;(theme/spacemacs-init)
+  (theme/spacemacs-init)
   ;;(theme/monokai-alt-init)
   ;;(theme/solarized-init)
   ;;(theme/dracula-init)

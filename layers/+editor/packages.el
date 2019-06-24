@@ -3,9 +3,9 @@
   "smex use-package initialize."
   (use-package smex
     :ensure t
-    :bind
-    ("M-x" . smex)
-    ("C-f" . helm-imenu)))
+    :config
+;;    (bind-key "M-x" 'smex)
+    (bind-key "C-f" 'helm-imenu)))
 
 ;; ▶ General
 ;; ▼ CodeComplete ( Autocomplete, yasnippet )
@@ -152,19 +152,12 @@
 (defun editor/nw-keybindings ()
   "nw keybindings"
   ;; Meta keys
-  (bind-key "≈" 'smex)
+;;  (bind-key "≈" 'smex)
 
   ;; bm-toggle
   (bind-key "£" 'bm-toggle)
   (bind-key "™" 'bm-next)
   (bind-key "¡" 'bm-previous)
-
-  ;; helm-gtags
-  (bind-key "†" 'helm-gtags-pop-stack)
-  (bind-key "‘" 'helm-gtags-find-tag)
-  (bind-key "“" 'helm-gtags-find-rtag)
-  (bind-key "≥" 'helm-gtags-dwim)
-  (bind-key "≤" 'helm-gtags-tags-in-this-function)
   )
 
 ;; ▼emacs ecb-keybindings.
@@ -359,57 +352,12 @@
 
 ;; ▶ IDE
 ;; ▼ Helm Packages
-(defun editor/helm-gtags ()
-  "Helm gtags setting."
-  (use-package helm-gtags
-    :ensure t
-    :commands (helm-gtags-mode helm-gtags-dwim)
-    :diminish "HGt"
-    :bind (("M-t" . helm-gtags-pop-stack)
-           ("M-]" . helm-gtags-find-tag)
-           ("M-[" . helm-gtags-find-rtag)
-           ("M-." . helm-gtags-dwim)
-           ("M-," . helm-gtags-tags-in-this-function)
-           ("C-j" . helm-gtags-select)
-           ("M-g M-p" . helm-gtags-parse-file))
-    :init
-    ;; Enable helm-gtags-mode in code
-    (add-hook 'c-mode-hook 'helm-gtags-mode)
-    (add-hook 'c++-mode-hook 'helm-gtags-mode)
-    (add-hook 'asm-mode-hook 'helm-gtags-mode)
-    (add-hook 'dired-mode-hook 'helm-gtags-mode)
-
-    ;; gtags setting
-    (setq helm-gtags-ignore-case t
-          helm-gtags-auto-update t
-          helm-gtags-use-input-at-cursor t
-          helm-gtags-pulse-at-cursor t)
-    )
-  )
-
 (defun editor/autopair ()
   "autopair"
   (use-package autopair)
   :ensure t
   :init (add-hook 'c-mode-common-hook #'(lambda () (autopair-mode)))
   )
-
-;; Helm cscope
-(defun editor/helm-cscope ()
-  "Helm cscope settings."
-  (use-package helm-cscope
-    :ensure t
-    :init
-    (bind-key "M-c" 'helm-cscope-find-calling-this-function)
-    (bind-key "M-]" 'helm-cscope-find-global-definition)
-    (bind-key "M-[" 'helm-cscope-pop-mark)
-    ;; terminal key bindings
-    (bind-key "ç" 'helm-cscope-find-calling-this-function)
-    (bind-key "ß" 'helm-cscope-find-this-text-string)
-    (bind-key "ƒ" 'helm-cscope-find-egrep-pattern) 
-    )
-  )
- 
 
 ;; helm swoop
 (defun editor/helm-swoop ()
@@ -645,8 +593,6 @@
   ;; IDE
   (editor/helm-projectile)
   (editor/ecb)
-  (editor/helm-gtags)
-
 
   ;; Scrolling
   (editor/sublimity)
@@ -678,7 +624,6 @@
 
   ;; helm bind-key
   (editor/helm-bind-key)
-  (editor/helm-cscope)
 	(pl-transparency 100)
 
   ;; python settings

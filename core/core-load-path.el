@@ -15,23 +15,27 @@
   " This directory is divide to package.")
 
 ;; ▶ appearance directory.
-(defvar layer-appearance-dir (expand-file-name "+Appearance/packages.el" emacs-layers-dir)
+(defvar layer-appearance-dir (expand-file-name "+appearance/packages.el" emacs-layers-dir)
   "This directory Appearance directory.")
 
 ;; ▶ VersionControl Directory.
-(defvar layer-version-control-dir (expand-file-name "+VersionControl/packages.el" emacs-layers-dir)
+(defvar layer-version-control-dir (expand-file-name "+versioncontrol/packages.el" emacs-layers-dir)
   "This Directory VersionControl.")
 
 ;; ▶ Editor Directory.
-(defvar layer-editor-dir (expand-file-name "+Editor/packages.el" emacs-layers-dir)
+(defvar layer-editor-dir (expand-file-name "+editor/packages.el" emacs-layers-dir)
+  "This Directory Editor.")
+
+;; ▶tags Directory.
+(defvar layer-tags-dir (expand-file-name "+tags/packages.el" emacs-layers-dir)
   "This Directory Editor.")
 
 ;; global nlinum directory
-(defvar layer-editor-nlinum-dir (expand-file-name "+Editor/nlinum/nlinum.el" emacs-layers-dir)
+(defvar layer-editor-nlinum-dir (expand-file-name "+editor/nlinum/nlinum.el" emacs-layers-dir)
   "This Directory nlinum dir.")
 
 ;; ▶ Build/Debugger Directory.
-(defvar layer-build-dir (expand-file-name "+Build/packages.el" emacs-layers-dir)
+(defvar layer-build-dir (expand-file-name "+build/packages.el" emacs-layers-dir)
   "This Directory Build/Debugger.")
 
 ;; ▶ add layer-version-control-dir
@@ -53,6 +57,12 @@
   (load-file layer-editor-nlinum-dir)
   (editor/init))
 
+;; ▶ ad dtags path init
+(defun emacs/load-tags-dir ()
+  "emacs tags directory load path."
+  (load-file layer-tags-dir)
+  (tags/init))
+
 ;; ▶ add build/debugging path init
 (defun emacs/load-debug-dir ()
   "emacs build/debugging directory load path."
@@ -67,6 +77,8 @@
   (emacs/load-appearance-path)
   ;; Editor init
   (emacs/load-editor-dir)
+  ;; emacs tags init
+  (emacs/load-tags-dir)
   ;; Build/debugger init
   (emacs/load-debug-dir)
   )
