@@ -4,8 +4,7 @@
   (use-package smex
     :ensure t
     :config
-;;    (bind-key "M-x" 'smex)
-    (bind-key "C-f" 'helm-imenu)))
+    (bind-key "M-x" 'smex)))
 
 ;; ▶ General
 ;; ▼ CodeComplete ( Autocomplete, yasnippet )

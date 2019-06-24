@@ -30,6 +30,10 @@
 (defvar layer-tags-dir (expand-file-name "+tags/packages.el" emacs-layers-dir)
   "This Directory Editor.")
 
+;; tools Directory.
+(defvar layer-tools-dir (expand-file-name "+tools/package.el" emacs-layers-dir)
+  "This Directory Editor.")
+
 ;; global nlinum directory
 (defvar layer-editor-nlinum-dir (expand-file-name "+editor/nlinum/nlinum.el" emacs-layers-dir)
   "This Directory nlinum dir.")
@@ -57,11 +61,17 @@
   (load-file layer-editor-nlinum-dir)
   (editor/init))
 
-;; ▶ ad dtags path init
+;; ▶add tags path init
 (defun emacs/load-tags-dir ()
   "emacs tags directory load path."
   (load-file layer-tags-dir)
   (tags/init))
+
+;; add tools path init
+(defun emacs/load-tools-dir ()
+  "emacs tags directory load path."
+  (load-file layer-tools-dir)
+  (tools/init))
 
 ;; ▶ add build/debugging path init
 (defun emacs/load-debug-dir ()
@@ -81,6 +91,8 @@
   (emacs/load-tags-dir)
   ;; Build/debugger init
   (emacs/load-debug-dir)
+  ;; helm-imenu
+  (emacs/load-tools-dir)
   )
 
 (provide 'core-load-path)
