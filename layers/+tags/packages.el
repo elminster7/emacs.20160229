@@ -5,7 +5,6 @@
     (add-hook 'c-mode-hook 'helm-cscope-mode)
     (add-hook 'c++-mode-hook 'helm-cscope-mode)
     (add-hook 'asm-mode-hook 'helm-cscope-mode)
-    (add-hook 'dired-mode-hook 'helm-cscope-mode)
     :config
     (bind-key "C-c" 'helm-cscope-find-calling-this-function)
     (bind-key "C-]" 'helm-cscope-find-global-definition)
@@ -28,7 +27,6 @@
     (add-hook 'c-mode-hook 'helm-gtags-mode)
     (add-hook 'c++-mode-hook 'helm-gtags-mode)
     (add-hook 'asm-mode-hook 'helm-gtags-mode)
-    (add-hook 'dired-mode-hook 'helm-gtags-mode)
     ;; gtags setting
     (setq helm-gtags-ignore-case t
           helm-gtags-auto-update t

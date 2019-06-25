@@ -462,6 +462,8 @@
   (fset 'yes-or-no-p 'y-or-n-p)
   (modify-coding-system-alist 'file "\\.*\\'" 'utf-8)
   (setq coding-system-for-read 'utf-8)
+  (setq coding-system-for-write 'utf-8)
+  (set-language-environment "UTF-8")
   (setq-default
    whitespace-line-column 80
    whitespace-style       '(face lines-tail))
@@ -563,7 +565,7 @@
 (defun editor/init ()
   "Editor envirment init"
   ;; Default init
-  (better/smex)
+  ;;(better/smex)
   
   ;; Autocomplete
   (editor/autocomplete)
