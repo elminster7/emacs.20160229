@@ -71,6 +71,8 @@
   (global-set-key (kbd "M-x") #'helm-M-x)
   (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
   (global-set-key (kbd "C-x C-f") #'helm-find-files)
+  (global-set-key (kbd "C-b") #'helm-mini)
+  (global-set-key (kbd "C-s") #'lgrep)
 
   ;;(setq helm-M-x-fuzzy-match t)
   )
@@ -366,8 +368,7 @@
   (use-package helm-swoop
     :ensure t
     :bind (("C-c o" . helm-swoop)
-           ("C-c O" . helm-multi-swoop)))
-  )
+           ("C-c O" . helm-multi-swoop))))
 
 ;; helm-bind-key
 (defun editor/helm-bind-key ()
