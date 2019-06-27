@@ -4,7 +4,9 @@
   (use-package smex
     :ensure t
     :config
-    (bind-key "M-x" 'smex)))
+    )
+  )
+    ;;(bind-key "M-x" 'smex)))
 
 ;; ▶ General
 ;; ▼ CodeComplete ( Autocomplete, yasnippet )
@@ -66,11 +68,11 @@
 			             (projectile-mode 1)
 			             (editorconfig-mode 1)))
   (setq tramp-verbose 6)
-  (global-set-key (kbd "M-x") #'helm-M-x)
+  ;;(global-set-key (kbd "M-x") #'helm-M-x)
   (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
   (global-set-key (kbd "C-x C-f") #'helm-find-files)
 
-  (setq helm-M-x-fuzzy-match t)
+  ;;(setq helm-M-x-fuzzy-match t)
   )
 
 ;; toggle-fullscreen

@@ -6,18 +6,6 @@
 ;; Coding System Read File encoding.
 (modify-coding-system-alist 'file "\\.*\\'" 'utf-8)
 (setq coding-system-for-read 'utf-8)
-
-;;--------------------------------- Font
-
-;;--------------------------------- korean font setting
-(set-fontset-font "fontset-default" '(#x1100 . #xffdc)
-                   '("Gulim" . "iso10646-1"))
-(set-fontset-font "fontset-default" '(#xe0bc . #xf66e)
-                   '("Gulim" . "iso10646-1"))
-
-(setq face-font-rescale-alist
-       '((".*hiragino.*" . 1.0)
-	 (".*Gulim.*" . 1.0)))
 (set-language-environment "Korean")
 
 ;;--------------------------------- Function-args
@@ -41,14 +29,6 @@
 
 ;;--------------------------------- Layout for ecb-layout
 (setq ecb-tip-of-the-day nil)
-;;(ecb-layout-define "babel-custom-layout" left
-;;  "This function creates the following layout by babel:"
-;;  (ecb-set-speedbar-buffer)
-;;  (ecb-split-ver 0.35)
-;;  (ecb-set-methods-buffer)
-;;  (ecb-split-ver 0.30)
-;;  (ecb-set-symboldef-buffer)
-;;  (select-window (next-window)))
 
 ;;--------------------------------- Dired
 ;; latest file list

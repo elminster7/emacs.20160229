@@ -212,7 +212,7 @@
   ;; Theme Init
   ;;(theme/monokai-init)
   ;;(theme/leuven-init)
-  (theme/spacemacs-init)
+  ;;(theme/spacemacs-init)
   ;;(theme/monokai-alt-init)
   ;;(theme/solarized-init)
   ;;(theme/dracula-init)
