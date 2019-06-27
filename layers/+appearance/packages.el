@@ -226,7 +226,7 @@
   (scope/winmove-init)
   ;;(scope/highlight-indent-init)
   (scope/better-default-init)
-  (scope/anything-init)
+  ;;(scope/anything-init)
   ;;(scope/telephone-init)
 
   ;; scope org init
