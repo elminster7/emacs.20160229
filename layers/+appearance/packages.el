@@ -50,9 +50,7 @@
   "Spacemacs theme install."
   (use-package spacemacs-theme
     :ensure t
-    :init
-    (load-theme 'spacemacs-dark t))
-  )
+    :config (load-theme 'spacemacs-dark t)))
 
 ;;  ▶ initialize monokai-alt-theme
 (defun theme/monokai-alt-init ()
@@ -85,6 +83,14 @@
     :ensure t
     :init
     (load-theme 'hemisu-light t)))
+
+;; ▶ color rainbow mode.
+(defun scope/rainbow-init ()
+  "rainbow mode init"
+  (use-package rainbow-mode
+    :defer t
+    :init
+    (setq rainbow-mode t)))
 
 ;; ▶ Menu/ToolBar
 ;; ▶ System Settings
@@ -208,7 +214,6 @@
 
     ;; Appearance Init
 (defun appearance/init ()
-  
   ;; Theme Init
   ;;(theme/monokai-init)
   ;;(theme/leuven-init)
@@ -220,8 +225,8 @@
   ;;(theme/material-init)
   ;;(theme/hemisu-init)
   ;;(theme/autumn-light-init)
-  
   ;; Scopes Init
+  (scope/rainbow-init)
   (scope/beacon-init)
   (scope/winmove-init)
   ;;(scope/highlight-indent-init)
