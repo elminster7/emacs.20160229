@@ -47,10 +47,11 @@
 
 ;; ▶ initialize spacemacs theme.
 (defun theme/spacemacs-init ()
-  "Spacemacs theme install."
-  (use-package spacemacs-theme
-    :ensure t
-    :config (load-theme 'spacemacs-dark t)))
+;;  "Spacemacs theme install."
+;;  (use-package spacemacs-theme
+;;    :ensure t
+;;    :init (load-theme 'spacemacs-dark t)))
+  (load-theme 'spacemacs-dark t))
 
 ;;  ▶ initialize monokai-alt-theme
 (defun theme/monokai-alt-init ()
@@ -217,7 +218,7 @@
   ;; Theme Init
   ;;(theme/monokai-init)
   ;;(theme/leuven-init)
-  ;;(theme/spacemacs-init)
+  (theme/spacemacs-init)
   ;;(theme/monokai-alt-init)
   ;;(theme/solarized-init)
   ;;(theme/dracula-init)
