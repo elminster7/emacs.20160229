@@ -73,8 +73,9 @@
   (global-set-key (kbd "C-x C-f") #'helm-find-files)
   (global-set-key (kbd "C-b") #'helm-mini)
   (global-set-key (kbd "C-s") #'lgrep)
-
-  ;;(setq helm-M-x-fuzzy-match t)
+  ;; iterm2 macosx terminal key
+  (global-set-key (kbd "≈") #'helm-M-x)
+  (setq helm-M-x-fuzzy-match t)
   )
 
 ;; toggle-fullscreen
