@@ -28,7 +28,17 @@
     ("C-x p" . magit-pull))
   )
 
+(defun git/git-grep-init ()
+  "git grep use-package initialize."
+  (use-package helm-git-grep
+    :ensure t
+    :bind
+    ("C-c g" . helm-git-grep)
+    ("C-c i" . helm-git-grep-isearch)))
+
 ;; ▶ Version Control package init.
 (defun versioncontrol/init ()
   "Version Control package init."
-  (magit/magit-init))
+  (magit/magit-init)
+  (git/git-grep-init)
+  )
