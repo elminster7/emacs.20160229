@@ -72,7 +72,6 @@
   (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
   (global-set-key (kbd "C-x C-f") #'helm-find-files)
   (global-set-key (kbd "C-b") #'helm-mini)
-  (global-set-key (kbd "C-s") #'lgrep)
   ;; iterm2 macosx terminal key
   (global-set-key (kbd "≈") #'helm-M-x)
   (setq helm-M-x-fuzzy-match t)
@@ -127,7 +126,7 @@
     (setq jedi:setup-keys t)
     (setq jedi:complete-on-dot t)
     (setq python-shell-interpreter "ipython")
-    (setq python-shell-interpreter-args "--simple-prompt -i")
+;;    (setq python-shell-interpreter-args "-i --simple-prompt")
     (setq python-shell-completion-native-enable nil)
     (add-hook 'python-mode-hook 'jedi:setup))
   )
@@ -576,7 +575,7 @@
   (editor/yasnippet)
 
   ;; Editor modify
-  ;;(editor/igrep)
+  (editor/igrep)
   (editor/multiplecursor)
 
   ;; Hlinum
@@ -629,10 +628,10 @@
 
   ;; helm bind-key
   (editor/helm-bind-key)
-	(pl-transparency 100)
+  (pl-transparency 100)
 
   ;; python settings
-  ;;(editor/python)
+  (editor/python)
 ;;  (editor/elpy)
   (editor/exec-path-from-shell)
   )
