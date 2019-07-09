@@ -423,6 +423,8 @@
   (global-nlinum-mode t)
   (setq nlinum-format "%4d")
   (global-hl-line-mode 1)
+  (set-face-background 'hl-line "darkblue")
+  (set-face-background 'semantic-highlight-func-current-tag-face "red")
 ;;  (global-hl-line-highlight)
   )
 
