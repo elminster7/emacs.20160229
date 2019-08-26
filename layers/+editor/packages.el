@@ -110,6 +110,14 @@
              (append '(ac-source-yasnippet) ac-sources)))))
   )
 
+;; ▼w3-browse
+(defun editor/browser ()
+  "w3 terminal browser."
+  (use-package w3m
+    :defer t
+    :init
+))
+
 ;; python env settings
 ;; sudo apt-get install python-pip
 ;; pip install virtualenv
@@ -630,6 +638,8 @@
 
   ;; helm bind-key
   (editor/helm-bind-key)
+
+  (editor/browser)
   (pl-transparency 100)
 
   ;; python settings
