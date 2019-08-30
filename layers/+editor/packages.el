@@ -181,7 +181,7 @@
   (bind-key "M-4" 'ecb-goto-window-edit1)
 
   ;; dired keysettings
-  (bind-key "C-v" 'find-name-dired))
+  (bind-key "C-h" 'find-name-dired))
 
 ;; ▼ better default/ido-mode
 (defun editor/better-default ()
@@ -474,6 +474,10 @@
   "editor settings."
   (fset 'yes-or-no-p 'y-or-n-p)
   (modify-coding-system-alist 'file "\\.*\\'" 'utf-8)
+  (prefer-coding-system 'utf-8)
+  (set-default-coding-systems 'utf-8)
+  (set-terminal-coding-system 'utf-8)
+  (set-keyboard-coding-system 'utf-8)
   (setq coding-system-for-read 'utf-8)
   (setq coding-system-for-write 'utf-8)
   (set-language-environment "UTF-8")
