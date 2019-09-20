@@ -124,10 +124,10 @@
 (defun scope/winmove-init ()
   "window move init"
   (use-package winmove
-    :bind (("M-<right>" . windmove-right)
-	   ("M-<left>" . windmove-left)
-	   ("M-<up>" . windmove-up)
-	   ("M-<down>" . windmove-down))
+    :bind (("C-c <right>" . windmove-right)
+	   ("C-c <left>" . windmove-left)
+	   ("C-c <up>" . windmove-up)
+	   ("C-c <down>" . windmove-down))
     ))
 
 ;; ▼ highlight-indent-guides
