@@ -392,7 +392,7 @@
   "ECB IDE init"
   (use-package ecb
     :ensure t)
-  :init (setq ecb-layout-name "left-symboldef")
+  :init (setq ecb-layout-name "right1")
   (setq ecb-examples-bufferinfo-buffer-name nil)
   (setq stack-trace-on-error t)
   (setq ecb-version-check nil)
