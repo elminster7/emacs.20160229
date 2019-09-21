@@ -266,7 +266,7 @@ If you have not set a compilation-window in `ecb-compile-window-height' then
 the layout contains no persistent compilation window and the other windows get a
 little more place."
   (let ((edit-win (previous-window (selected-window) 0)))
-    (ecb-set-directories-buffer)
+    (ecb-set-history-buffer)
     (ecb-split-ver 0.3)
     (ecb-set-sources-buffer)
     (ecb-split-ver 0.5)
